@@ -10,7 +10,6 @@ const useChartsData = (params) => {
         refetchOnWindowFocus: false,
         enabled: false
     });
-    console.log(data)
     const modifiedIsLoading = status === 'loading' || status === 'idle';
     return {
         ChartsDataData:data,

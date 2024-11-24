@@ -9,12 +9,12 @@ import "./ChartComponent.css"
 // Register necessary Chart.js components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-const ChartComponent = ({ id, data, options, onDelete }) => {
+const ChartComponent = ({ id, data, options, onDelete ,title }) => {
   return (
-    <Card sx={{ marginBottom: 12 }}>
+    <Card className='card_style'>
       <CardContent>
         <div className='header'>
-        <Typography variant="h6">Chart {id}</Typography>
+        <Typography variant="h6">{title ? title : `Chart ${id}`}</Typography>
         <IconButton onClick={() => onDelete(id)} sx={{color:'red'}}>
           <DeleteIcon />
         </IconButton>
